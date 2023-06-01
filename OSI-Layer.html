@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAN</title>
+    <style>
+        body {
+            background-color: #F9DBBB;
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            background-color: #2E3840;
+            height: 90px;
+            padding: 2px;
+            margin: 2px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px;
+        }
+        .content {
+            background-color: #4E6E81;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px;
+            padding: 5px;
+            margin: 4px;
+        }
+        img{
+            width: 400px;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+        }
+        iframe{
+            display: block;
+            margin: auto;
+        }
+        footer > a {
+            text-decoration: none;
+            color: black;
+            display :flex;
+        }
+        footer > a:hover{
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+        /* Tablet */
+        @media (max-width: 768px) {
+            img, iframe {
+                    width: 100%;
+            }
+        }
+        /* Mobile */
+        @media (max-width: 576px) {
+            img, iframe {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>OSI Model <br>Data Link dan Network</h1>
+    <div class="content">
+    <header>
+        <table>
+            <tr><td>Kelompok V</td><td>:</td><td></td></tr>
+            <tr><td>Anggota</td><td>:</td><td>Firdaus</td></tr>
+            <tr><td></td><td>:</td><td>Putri Pitri Berlian</td></tr>
+            <tr><td></td><td>:</td><td>Muhamad Lutfi Faisal</td></tr>
+            <tr><td></td><td>:</td><td>Fira GUmiwang Nurdini</td></tr>
+            <tr><td></td><td>:</td><td>Muhamad Furqon Alpasa</td></tr>
+        </table>
+    </header>
+    <hr>
+    <Main>
+        <section>
+            <img src="OSI.jpeg">
+            <p>Pada tahun 1970, terdapat sebuah organisasi yang berlokasi di Eropa bernama ISO (International Organization for Standardization), organisasi ini mengembangkan sebuah model arsitektur jaringan bernama OSI Reference Model for Open Networking (Model Jaringan Terbuka OSI) yang terdiri dari 7 layer yang memiliki fungsi masing-masing. 
+                <br>Kepanjangan dari OSI adalah Open System Interconnection yang memiliki arti sebagai model referensi dari sebuah kerangka yang bersifat konseptual, sekarang sudah berkembang dan menjadi sebuah standarisasi khusus yang berkaitan dengan koneksi komputer. 
+                <br>Fungsi dari konsep OSI layer adalah memudahkan proses pencarian titik awal permasalahan, sehingga meminimalkan waktu yang di perlukan untuk melacak masalah jaringan dan masalah bisa diatasi dengan mudah.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UJn-fbxWbGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="pembahasan">
+                <h2>Data Link</h2>
+                <p>Data link merupakan lapisan terbawah kedua, tugas utamanya adalah menyediakan alamat MAC sumber dan tujuan. Perbedaanya alamat MAC bersifat fisik, sedangkan alamat IP bersifat logis. Paket akan diubah menjadi frame oleh data link layer.  
+                    Data link layer merupakan salah satu layer OSI yang cukup kompleks, oleh karena itu layer ini kemudian dibagi lagi menjadi dua sublayer, yaitu
+                    </p>
+                <p>Data link layer merupakan salah satu layer OSI yang cukup kompleks, oleh karena itu layer ini kemudian dibagi lagi menjadi dua sublayer, yaitu :</p>
+                <ol>
+                    <li>Layer Media Access Control (MAC) bertanggung jawab untuk mengendalikan bagaimana sebuah perangkat pada suatu jaringan memperoleh akses ke medium dan izin untuk melakukan transmisi data. </li>
+                    <li>Layer Logical Link Control (LLC) bertanggung jawab untuk mengidentifikasi dan membungkus protokol network layer dan mengontrol pemeriksaan kesalahan dan juga melakukan sinkronisasi pada frame.</li>
+                </ol>
+                
+                <h3>Fungsi Data Link</h3>
+                <p>Data Link layer berfungsi untuk menentukan bagaimana bit data dikelompokkan menjadi format yang disebut sebagai frame. Selain itu, pada level ini terjadi koreksi kesalahan, flow control, pengalamatan perangkat keras (seperti halnya Media Access Control Address (MAC Address)), dan menetukan bagaimana perangkat-perangkat jaringan seperti hub, bridge, repeater, dan switch layer 2 beroperasi. </p>
+                    <img src="https://dwblog-ecdf.kxcdn.com/wp-content/uploads/2022/09/cara-kerja-jaringan-LAN-768x432.jpg">
+                <br>
+                <h2>Network</h2>
+                <p>Network layer adalah lapisan layer yang memiliki tanggungjawab menetapkan jalur yang digunakan untuk transfer data. Layer network bertugas untuk mendefinisikan alamat IP sehingga setiap komputer dapat saling terkoneksi dalam satu jaringan.</p>
+                <img src="Layer3.jpeg">
+                <h3>Fungsi Network</h3>
+                <p>Network layer memiliki fungsi mendefinisikan alamat IP, membuat header paket, dan melakukan routing internetworking, adapun fungsi lainnya adalah melaksanakan proses routing dan membuat header untuk setiap paket data yang ada.</p>
+                <h2>Cara Kerja Model OSI</h2>
+                <ol>
+                    <li>Informasi berawal dari layer Application. Informasi kemudian melewati layer presentation dan layer session. Pada tahap ini biasanya belum dilakukan transformasi data. Informasi yang melalui ketiga layer ini disebut PDU (Protocol Data Unit) atau data saja.</li>
+                    <li>Setelah sampai di layer Transport, data akan mengalami transformasi ke bentuk lain yang disebut segmen.</li>
+                    <li>Segmen mengalir ke layer network dan kemudian diubah menjadi packet.</li>
+                    <li>Packet mengalir ke layer data link dan kemudian diubah menjadi frame.</li>
+                    <li>Terakhir, frame mengalir ke layer physical dan kemudian diubah menjadi bits atau bit-bit.</li>
+                    <li>Pada layer ini, bit-bit diubah menjadi besaran fisik, seperti arus listrik, gelombang elektromagnetik, dan sebagainya.</li>
+                </ol>
+                <p>Proses pengubahan bentuk dari satu layer ke layer berikutnya dilakukan dengan menambahkan header khusus yang disebut enkapsulasi. Proses enkapsulasi terjadi berulang-ulang hingga data diubah menjadi bit-bit. Kemudian bit-bit ini dikirim ke host target melalui media jaringan.
+                   <br> Setelah informasi (berupa bit-bit) sampai di host target maka proses kebalikannya, yaitu melepas header satu per satu dari layer terbawah hingga ke layer paling atas akan dilakukan. Proses melepas header ini disebut de-enkapsulasi.</p>
+        </section>
+    </Main>
+    <hr>
+    <h2>Kelompok V</h2>
+    <p>Anggota :</p>
+    <ul>
+        <li>Putri Pitri Berlian</li>
+        <li>Fira Gumiwang Nurdini</li>
+        <li>Muhammad Lutfi Faisal</li>
+        <li>Muhammad Furqon Al-Pasa</li>
+        <li>Firdaus</li>
+    </ul>
+    </div>
+</body>
+</html>
